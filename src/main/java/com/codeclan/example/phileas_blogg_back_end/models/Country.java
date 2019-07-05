@@ -20,9 +20,8 @@ public class Country {
     public Country() {
     }
 
-    public Country(String name, List<Review> reviews) {
+    public Country(String name) {
         this.name = name;
-        this.reviews = reviews;
     }
 
     public long getId() {

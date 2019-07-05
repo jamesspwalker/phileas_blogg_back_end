@@ -12,11 +12,11 @@ public class Review {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name="country_id", nullable = true)
+    @JoinColumn(name="country_id", nullable = false)
     private Country country;
 
     @ManyToOne
-    @JoinColumn(name="user_id", nullable=true)
+    @JoinColumn(name="user_id", nullable = false)
     private User user;
 
     @Column
@@ -26,7 +26,7 @@ public class Review {
     private String text;
 
     @Column
-    private Date date;
+    private int date;
 
     @Column
     private int rating;
@@ -34,7 +34,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(Country country, User user, String title, String text, Date date, int rating) {
+    public Review(Country country, User user, String title, String text, int date, int rating) {
         this.country = country;
         this.user = user;
         this.title = title;
@@ -83,11 +83,11 @@ public class Review {
         this.text = text;
     }
 
-    public Date getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(int date) {
         this.date = date;
     }
 

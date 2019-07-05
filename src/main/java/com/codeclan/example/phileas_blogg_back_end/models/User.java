@@ -26,8 +26,7 @@ public class User {
     public User() {
     }
 
-    public User(List<Review> reviews, String username, String name, int level) {
-        this.reviews = reviews;
+    public User(String username, String name, int level) {
         this.username = username;
         this.name = name;
         this.level = level;
