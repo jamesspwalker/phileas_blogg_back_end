@@ -1,7 +1,6 @@
 package com.codeclan.example.phileas_blogg_back_end.models;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name="reviews")
@@ -26,7 +25,7 @@ public class Review {
     private String text;
 
     @Column
-    private int date;
+    private String date;
 
     @Column
     private int rating;
@@ -34,7 +33,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(Country country, User user, String title, String text, int date, int rating) {
+    public Review(Country country, User user, String title, String text, String date, int rating) {
         this.country = country;
         this.user = user;
         this.title = title;
@@ -83,11 +82,11 @@ public class Review {
         this.text = text;
     }
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

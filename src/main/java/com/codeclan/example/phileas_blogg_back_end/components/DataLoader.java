@@ -34,7 +34,7 @@ public class DataLoader implements ApplicationRunner {
         User edmund = new User("Ed", "Edmund", 2);
         userRepository.save(edmund);
 
-        Review review = new Review(scotland, edmund, "Hello", "Scotland is ok", 2019-10-10, 4);
+        Review review = new Review(scotland, edmund, "Hello", "Scotland is ok", "2019-10-10", 4);
         reviewRepository.save(review);
 
     }
