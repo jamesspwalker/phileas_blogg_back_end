@@ -29,4 +29,9 @@ public class UserController {
     public List<User> getUsersByLevelDesc(){
         return userRepository.findAllByOrderByLevelDesc();
     }
+
+    @GetMapping(value="/contains/{partial_username}")
+    public List<User> getUsersByPartialUsername(@PathVariable String partial_username){
+        return userRepository.findByUsernameContainingIgnoreCase(partial_username);
+    }
 }

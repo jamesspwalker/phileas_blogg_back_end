@@ -45,4 +45,5 @@ public class ReviewController {
     public List<Review> getReviewsByPartialTitle(@PathVariable String partial_title){
         return reviewRepository.findByTitleContainingIgnoreCase(partial_title);
     }
+
 }

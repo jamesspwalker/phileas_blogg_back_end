@@ -20,4 +20,5 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
     List<Review> findReviewsByUser_Id(Long user_id);
 
     List<Review> findByTitleContainingIgnoreCase(String partial_title);
+
 }

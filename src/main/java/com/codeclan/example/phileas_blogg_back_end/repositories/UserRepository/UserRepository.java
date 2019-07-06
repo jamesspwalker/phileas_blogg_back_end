@@ -14,4 +14,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findByLevel(int level);
 
     List<User> findAllByOrderByLevelDesc();
+
+    List<User> findByUsernameContainingIgnoreCase(String partial_username);
 }
