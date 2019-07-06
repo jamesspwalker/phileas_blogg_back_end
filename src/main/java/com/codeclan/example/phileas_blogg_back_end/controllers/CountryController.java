@@ -21,5 +21,10 @@ public class CountryController {
         return countryRepository.findByNameIgnoreCase(name);
     }
 
+//    @GetMapping(value="/{name}/reviews/{date}")
+//    public List<Review> getReviewsByDate(@PathVariable String name, @PathVariable String date) {
+//        return countryRepository.findByNameAndReviews_DateIgnoreCase(name, date);
+//    }
+
 
 }
