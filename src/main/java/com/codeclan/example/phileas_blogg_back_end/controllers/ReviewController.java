@@ -41,5 +41,8 @@ public class ReviewController {
         return reviewRepository.findAllByOrderByRatingDesc();
     }
 
-    @GetMapping(value="/")
+    @GetMapping(value="/contains/{partial_title}")
+    public List<Review> getReviewsByPartialTitle(@PathVariable String partial_title){
+        return reviewRepository.findByTitleContainingIgnoreCase(partial_title);
+    }
 }
