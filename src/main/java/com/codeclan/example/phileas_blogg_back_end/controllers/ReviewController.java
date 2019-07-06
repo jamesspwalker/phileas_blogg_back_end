@@ -1,7 +1,6 @@
 package com.codeclan.example.phileas_blogg_back_end.controllers;
 
 import com.codeclan.example.phileas_blogg_back_end.models.Review;
-import com.codeclan.example.phileas_blogg_back_end.models.User;
 import com.codeclan.example.phileas_blogg_back_end.repositories.ReviewRepository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
@@ -27,6 +26,11 @@ public class ReviewController {
         return reviewRepository.findReviewsByCountry_Id(country_id);
     }
 
+    @GetMapping(value="/user/{user_id}")
+    public List<Review> getReviewsByUser_id(@PathVariable Long user_id){
+        return reviewRepository.findReviewsByUser_Id(user_id);
+    }
+
     @GetMapping(value="/rating/{rating}")
     public List<Review> getReviewsByRating(@PathVariable int rating){
         return reviewRepository.findReviewsByRating(rating);
@@ -36,4 +40,6 @@ public class ReviewController {
     public List<Review> getReviewsByRatingDesc(){
         return reviewRepository.findAllByOrderByRatingDesc();
     }
+
+    @GetMapping(value="/")
 }
