@@ -1,5 +1,7 @@
 package com.codeclan.example.phileas_blogg_back_end.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,10 +12,12 @@ public class Review {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="country_id", nullable = false)
     private Country country;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user;

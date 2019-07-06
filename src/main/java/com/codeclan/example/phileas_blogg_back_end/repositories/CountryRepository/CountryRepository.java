@@ -7,4 +7,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin
 public interface CountryRepository extends JpaRepository<Country, Long> {
+
+    Country findByNameIgnoreCase(String name);
 }
