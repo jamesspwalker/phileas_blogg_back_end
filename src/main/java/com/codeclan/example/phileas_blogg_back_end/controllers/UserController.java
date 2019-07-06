@@ -24,4 +24,9 @@ public class UserController {
     public List<User> getUsersByLevel(@PathVariable int level){
         return userRepository.findByLevel(level);
     }
+
+    @GetMapping(value="/ranking")
+    public List<User> getUsersByLevelDesc(){
+        return userRepository.findAllByOrderByLevelDesc();
+    }
 }
