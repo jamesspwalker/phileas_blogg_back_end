@@ -21,10 +21,10 @@ public class ReviewController {
         return reviewRepository.findReviewsByDate(date);
     }
 
-    @GetMapping(value="/country/{country_id}")
-    public List<Review> getReviewsByCountry_id(@PathVariable Long country_id){
-        return reviewRepository.findReviewsByCountry_Id(country_id);
-    }
+//    @GetMapping(value="/country/{country_id}")
+//    public List<Review> getReviewsByCountry_id(@PathVariable Long country_id){
+//        return reviewRepository.findReviewsByCountry_Id(country_id);
+//    }
 
     @GetMapping(value="/user/{user_id}")
     public List<Review> getReviewsByUser_id(@PathVariable Long user_id){

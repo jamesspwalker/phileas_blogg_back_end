@@ -46,13 +46,13 @@ public class DataLoader implements ApplicationRunner {
         User james = new User("js", "James", 5);
         userRepository.save(james);
 
-        Review review1 = new Review(scotland, edmund, "Hello", "Scotland is ok", "2019-10-10", 5);
+        Review review1 = new Review("Scotland", edmund, "Hello", "Scotland is ok", "2019-10-10", 5);
         reviewRepository.save(review1);
 
-        Review review2 = new Review(scotland, ru, "Review of Scotland", "Scotland is cool", "2019-10-11", 1);
+        Review review2 = new Review("England", ru, "Review of Scotland", "Scotland is cool", "2019-10-11", 1);
         reviewRepository.save(review2);
 
-        Review review3 = new Review(scotland, james, "Scotland", "Scotland is lovely", "2019-10-10", 2);
+        Review review3 = new Review("France", james, "Scotland", "Scotland is lovely", "2019-10-10", 2);
         reviewRepository.save(review3);
 
 
