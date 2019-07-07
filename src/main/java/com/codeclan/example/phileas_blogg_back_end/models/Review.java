@@ -18,7 +18,7 @@ public class Review {
     private Country country;
 
     @JsonIgnore
-    @ManyToOne 
+    @ManyToOne
     @JoinColumn(name="user_id", nullable = true)
     private User user;
 

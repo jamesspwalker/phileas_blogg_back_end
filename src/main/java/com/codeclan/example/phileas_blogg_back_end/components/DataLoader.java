@@ -34,6 +34,9 @@ public class DataLoader implements ApplicationRunner {
         Country england = new Country("England");
         countryRepository.save(england);
 
+        Country afghanistan = new Country("Afghanistan");
+        countryRepository.save(afghanistan);
+
         User edmund = new User("Ed", "Edmund", 2);
         userRepository.save(edmund);
 
