@@ -14,12 +14,12 @@ public class Review {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name="country_id", nullable = false)
+    @JoinColumn(name="country_id", nullable = true)
     private Country country;
 
     @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = false)
+    @ManyToOne 
+    @JoinColumn(name="user_id", nullable = true)
     private User user;
 
     @Column
