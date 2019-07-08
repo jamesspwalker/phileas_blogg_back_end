@@ -16,7 +16,7 @@ public class ReviewController {
     @Autowired
     ReviewRepository reviewRepository;
 
-    @GetMapping
+    @GetMapping(value="/all")
     public List<Review> getAllReviews(){
         return reviewRepository.findAll();
     }
