@@ -11,7 +11,7 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
 
     List<Review> findReviewsByDate(String date);
 
-    List<Review> findReviewsByCountry_Id(Long country_id);
+    List<Review> findReviewsByCountryIgnoreCase(String country);
 
     List<Review> findReviewsByRating(int rating);
 

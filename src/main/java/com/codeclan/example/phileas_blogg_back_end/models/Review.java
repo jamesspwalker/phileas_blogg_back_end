@@ -12,13 +12,13 @@ public class Review {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
-    @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name="country_id", nullable = true)
-    private Country country;
+//    @JsonIgnore
+//    @ManyToOne
+//    @JoinColumn(name="country_id", nullable = true)
+//    private Country country;
 
     @JsonIgnore
-    @ManyToOne 
+    @ManyToOne
     @JoinColumn(name="user_id", nullable = true)
     private User user;
 
@@ -32,12 +32,15 @@ public class Review {
     private String date;
 
     @Column
+    private String country;
+
+    @Column
     private int rating;
 
     public Review() {
     }
 
-    public Review(Country country, User user, String title, String text, String date, int rating) {
+    public Review(String country, User user, String title, String text, String date, int rating) {
         this.country = country;
         this.user = user;
         this.title = title;
@@ -54,11 +57,11 @@ public class Review {
         this.id = id;
     }
 
-    public Country getCountry() {
+    public String getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(String country) {
         this.country = country;
     }
 
