@@ -16,6 +16,11 @@ public class ReviewController {
     @Autowired
     ReviewRepository reviewRepository;
 
+    @GetMapping
+    public List<Review> getAllReviews(){
+        return reviewRepository.findAll();
+    }
+
     @GetMapping(value="/date/{date}")
     public List<Review> getReviewsByDate(@PathVariable String date){
         return reviewRepository.findReviewsByDate(date);

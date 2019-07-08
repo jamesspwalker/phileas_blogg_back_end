@@ -1,5 +1,6 @@
 package com.codeclan.example.phileas_blogg_back_end.controllers;
 
+import com.codeclan.example.phileas_blogg_back_end.models.Review;
 import com.codeclan.example.phileas_blogg_back_end.models.User;
 import com.codeclan.example.phileas_blogg_back_end.repositories.UserRepository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,11 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
+
+    @GetMapping
+    public List<User> getAllUsers(){
+        return userRepository.findAll();
+    }
 
     @GetMapping(value="/profile/{username}")
     public User getByUsername(@PathVariable String username){
