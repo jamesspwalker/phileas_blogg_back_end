@@ -13,7 +13,7 @@ public interface CountryRepository extends JpaRepository<Country, Long> {
 
     Country findByNameIgnoreCase(String name);
 
-    List<Review> findByNameAndReviews_DateIgnoreCase(String name, String date);
+//    List<Review> findByNameAndReviews_DateIgnoreCase(String name, String date);
 
     List<Country> findByNameContainingIgnoreCase(String partial_name);
 }

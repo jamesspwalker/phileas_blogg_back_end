@@ -14,8 +14,8 @@ public class Country {
     @Column
     private String name;
 
-    @OneToMany(mappedBy = "country", fetch = FetchType.LAZY)
-    private List<Review> reviews;
+//    @OneToMany(mappedBy = "country", fetch = FetchType.LAZY)
+//    private List<Review> reviews;
 
     public Country() {
     }
@@ -40,11 +40,12 @@ public class Country {
         this.name = name;
     }
 
-    public List<Review> getReviews() {
-        return reviews;
-    }
+//    public List<Review> getReviews() {
+//        return reviews;
+//    }
+//
+//    public void setReviews(List<Review> reviews) {
+//        this.reviews = reviews;
+//    }
 
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
     }
-}
