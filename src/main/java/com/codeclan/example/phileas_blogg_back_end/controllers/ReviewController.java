@@ -21,6 +21,11 @@ public class ReviewController {
         return reviewRepository.findAll();
     }
 
+    @GetMapping(value="/{id}")
+    public List<Review> getReviewsById(@PathVariable Long id){
+        return reviewRepository.findReviewsById(id);
+    }
+
     @GetMapping(value="/date/{date}")
     public List<Review> getReviewsByDate(@PathVariable String date){
         return reviewRepository.findReviewsByDate(date);

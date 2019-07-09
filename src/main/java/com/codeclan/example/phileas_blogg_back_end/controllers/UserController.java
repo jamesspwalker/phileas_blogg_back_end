@@ -21,6 +21,11 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    @GetMapping(value="/{id}")
+    public List<User> getReviewsByDate(@PathVariable Long id){
+        return userRepository.findUserById(id);
+    }
+
     @GetMapping(value="/profile/{username}")
     public User getByUsername(@PathVariable String username){
         return userRepository.findByUsernameIgnoreCase(username);
