@@ -16,6 +16,11 @@ public class CountryController {
     @Autowired
     CountryRepository countryRepository;
 
+    @GetMapping(value="/all")
+    public List<Country> getAllCountries(){
+        return countryRepository.findAll();
+    }
+
     @GetMapping(value="/{name}")
     public Country getCountryByName(@PathVariable String name) {
         return countryRepository.findByNameIgnoreCase(name);
