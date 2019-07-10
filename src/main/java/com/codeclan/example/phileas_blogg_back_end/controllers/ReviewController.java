@@ -16,20 +16,12 @@ public class  ReviewController {
     @Autowired
     ReviewRepository reviewRepository;
 
-    @DeleteMapping(value="/{id}")
-    public void deleteReviewById(@PathVariable Long id) {
-        reviewRepository.deleteById(id);
-    }
 
     @GetMapping(value="/all")
     public List<Review> getAllReviews(){
         return reviewRepository.findAll();
     }
 
-    @GetMapping(value="/{id}")
-    public List<Review> getReviewsById(@PathVariable Long id){
-        return reviewRepository.findReviewsById(id);
-    }
 
     @GetMapping(value="/date/{date}")
     public List<Review> getReviewsByDate(@PathVariable String date){
