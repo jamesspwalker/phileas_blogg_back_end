@@ -28,7 +28,7 @@ public class Review {
     @Column
     private String title;
 
-    @Column
+    @Column(length = 10000)
     private String text;
 
     @Column
