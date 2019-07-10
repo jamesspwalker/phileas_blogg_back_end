@@ -37,8 +37,8 @@ public class DataLoader implements ApplicationRunner {
         Country northKorea = new Country("Korea (Democratic People's Republic of");
         countryRepository.save(northKorea);
 
-        Country yemen = new Country("Yemen");
-        countryRepository.save(yemen);
+        Country myanmar = new Country("Myanmar");
+        countryRepository.save(myanmar);
 
         Country china = new Country("China");
         countryRepository.save(china);
@@ -73,7 +73,7 @@ public class DataLoader implements ApplicationRunner {
         Review review5 = new Review(china.getName(), mateusz, "All the stories you hear of China controlling their people are completely false, this is the most free country in the world", "China is amazing, the Chinese Communist party is amazing, they care about the people so much", "2015-04-04", 5);
         reviewRepository.save(review5);
 
-        Review review6 = new Review(yemen.getName(), edmund, "Worst country ever!", "After calling a number of guesthouses within Bristol, this one was the cheapest.... and now the reasons why are clear All the reviews here are true, myself and partner went to knock on the door and attached to it is a 'Notice' stating 'No refunds after 5 minutes' need you say anymore. We were not shown the room, just told 'Your room is upstairs', we spent almost the whole 5 minutes trying to find the room, to which we came across some horrifying scenes that you couldn't joke about. The lock on the room door had been smashed off at some point and a dodgy repair done, which left around a 1-2inch gap between the door and frame while closed! The place smelled, there was clearly drugs being taken and used from the address (May we add, this place also takes DSS claimants whom are claiming Housing Benefit) The guesthouse shouldn't be serving any food, following a investigation by Bristol City Council a while ago, however, upon entering the hallway it clearly states 'Breakfast in bed £3.50'. The lady whom 'greeted' us wasn't very friendly, and was quick to take our money. I could go on but take it from us, this truly is the house of horrors and you really won't get any sleep here. avoid and sit on a bench somewhere, as going here is likely to give you nightmares if not food posioning. I recommend anyone who has stayed here to contact Bristol City Council, request to speak to Food safety team or the Anti social behaviour unit, as they are fully aware and would love to hear from you.", "2012-01-14", 1);
+        Review review6 = new Review(myanmar.getName(), edmund, "Same great country despite the name change", "When we last went back in the 80's it was known as Burma and we were rather surprised by the name change, but that didn't stop us having a great time. When we first went some 30 odd years ago, our 2 boys were 10 and 7, but now they have kids of their own, how time flies. It was just as lovely as it was before and we would highly recommend, lovely people, lovely weather and lovely food", "2012-01-14", 4);
         reviewRepository.save(review6);
     }
 }
