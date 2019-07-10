@@ -18,7 +18,11 @@ public class Review {
 //    @JoinColumn(name="country_id", nullable = true)
 //    private Country country;
 
+<<<<<<< HEAD
     @JsonIgnoreProperties("reviews")
+=======
+    @JsonIgnoreProperties(value = "reviews")
+>>>>>>> develop
     @ManyToOne
     @JoinColumn(name="user_id", nullable = true)
     private User user;
