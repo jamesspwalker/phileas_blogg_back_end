@@ -1,6 +1,7 @@
 package com.codeclan.example.phileas_blogg_back_end.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -17,7 +18,7 @@ public class Review {
 //    @JoinColumn(name="country_id", nullable = true)
 //    private Country country;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("reviews")
     @ManyToOne
     @JoinColumn(name="user_id", nullable = true)
     private User user;

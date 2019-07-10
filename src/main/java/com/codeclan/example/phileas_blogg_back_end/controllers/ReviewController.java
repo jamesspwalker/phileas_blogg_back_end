@@ -61,4 +61,8 @@ public class  ReviewController {
         return reviewRepository.findByTitleContainingIgnoreCase(partial_title);
     }
 
+    @GetMapping(value="/date-order")
+    public List <Review> getReviewsByDateDesc() {
+        return reviewRepository.findAllByOrderByDateDesc();}
+
 }

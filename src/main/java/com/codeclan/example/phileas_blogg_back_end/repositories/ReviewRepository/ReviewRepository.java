@@ -22,4 +22,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
     List<Review> findByTitleContainingIgnoreCase(String partial_title);
 
     List<Review> findReviewsById(Long id);
+
+    List<Review> findAllByOrderByDateDesc();
 }
